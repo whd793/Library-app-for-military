@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" lang="ko-kr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" th:href="@{~/resources/css/common.css}"/>
+    <title>MiliBrary 회원가입</title>
+</head>
+<body>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+    <h1>MiliBrary 회원가입</h1>
+    <hr>
+    <br>
+    <p style="font-size:16px">회원가입을 위해 아래 링크를 클릭해주세요.</p>
+    <br>
+    <a th:href="@{${contextURL} + '/api/user/auth?token=' + ${token}}"
+       style="background-color: #866764; border: none; border-radius: 25px; color: white; padding: 15px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 15px;"
+       class="btn">
+        <b>이메일 주소 인증</b>
+    </a>
+    <br><br>
+    <p style="font-size:13px">해당 인증은 1시간 동안 유효합니다.</p>
+    <br>
+    <hr>
+    <br>
+    <b style="font-size:12px">Copyright MiliBrary All rights reserved.</b>
+</div>
+</body>
+</html>
